@@ -1,0 +1,170 @@
+<html> 
+
+<head> 
+	<title style="color: rgb(0, 255, 136);">Registration Form</title> 
+	<link rel="stylesheet" href="cssfrvol.css"> 
+</head> 
+
+<body style="background-image: url('img.jpg');"> 
+	<div class="main" style="border-style: solid;background-color:white;width:500px;padding:20px;border-radius:10px" > 
+		<h1 style = "text-align:center;">Registration Form</h1> 
+		<form action="register.php" method="post" style="overflow-y: scroll; max-height : 400px" onsubmit="validate(event)"> 
+			<label for="first">First Name:</label> 
+			<input type="text" id="first"name="first"placeholder="Enter your first name"  > 
+			<span id="s_first"></span>
+
+			<label for="last">Last Name:</label> 
+			<input type="text" id="last"name="last"placeholder="Enter your last name"  > 
+			<span id="s_last"></span>
+
+			<label for="email">Email:</label> 
+			<input type="email" id="email"name="email"placeholder="Enter your email"  > 
+			<span id="s_email"></span>
+
+			<label for="password">Password:</label> 
+			<input type="password" id="password"name="password"placeholder="Enter your password">
+			<span id="s_password"></span>
+            
+            <label for="gender">Gender:</label> 
+            <select id="gender" name="gender"  required> 
+                <option value="m">Male</option> 
+                <option value="f">Female</option> 
+                <option value="o">Other</option> 
+            </select> 
+			
+            
+			<label for="dob">Date of Birth:</label> 
+			<input type="date"id="dob" name="dob"placeholder="Enter your DOB"  > 
+			<span id="s_dob"></span>
+ 
+            <label for="blood">Blood Type:</label> 
+            <input type="text" id="blood"name="blood"placeholder="Enter your Blood type"> 
+			<span id="s_blood"></span>
+
+			<label for="mobile">Contact:</label> 
+			<input type="text" id="mobile"name="mobile"placeholder="Enter your Mobile Number"> 
+			<span id="s_mobile"></span>
+
+            <label for="pincode">pincode:</label> 
+            <input type="number" id="pincode"name="pincode"placeholder="Enter your pincode"> 
+			<span id="s_pincode"></span>
+
+
+			<div class="wrap"> 
+				<button type="submit" onclick="solve()"> 
+				Submit 
+				</button> 
+			</div> 
+		</form> 
+	</div> 
+	<script>
+		function validate()
+        {
+            event.preventDefault();
+			var first = 	document.getElementById('first').value;
+			var last = 	document.getElementById('last').value;
+			var email = document.getElementById('email').value;
+			var password = document.getElementById('password').value;
+			var dob = document.getElementById('dob').value;
+			var blood = document.getElementById('blood').value;
+			var mobile = document.getElementById('mobile').value;
+			var pincode = document.getElementById('pincode').value;
+
+			var ck_name = /^([A-Za-z\s]{3,})$/;
+			var ck_email = /^([a-z0-9]{5,})@([a-z0-9]{3,}).([a-z0-9!@#$%.]+)$/;
+			var ck_pass = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[\W])([A-Za-z0-9\W]).{8,}$/;
+			var ck_mobile = /^([0-9]{10,12})$/;
+			var ck_pincode = /^([0-9]{6,6})$/;
+
+			if(ck_name.test(first))
+			{
+				document.getElementById('first').style.borderColor = "green";
+				document.getElementById('s_first').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('first').style.borderColor = "red";
+				document.getElementById('s_first').innerHTML = "Enter a valid name";
+			}
+
+			if(ck_name.test(last))
+			{
+				document.getElementById('last').style.borderColor = "green";
+				document.getElementById('s_last').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('last').style.borderColor = "red";
+				document.getElementById('s_last').innerHTML = "Enter a valid name";
+			}
+
+			if(ck_email.test(email))
+			{
+				document.getElementById('email').style.borderColor = "green";
+				document.getElementById('s_email').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('email').style.borderColor = "red";
+				document.getElementById('s_email').innerHTML = "Enter a valid Email ID";
+			}
+
+			if(ck_pass.test(password))
+			{
+				document.getElementById('password').style.borderColor = "green";
+				document.getElementById('s_password').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('password').style.borderColor = "red";
+				document.getElementById('s_password').innerHTML = "Enter a valid Password";
+			}
+
+			if(dob != "")
+			{
+				document.getElementById('dob').style.borderColor = "green";
+				document.getElementById('s_dob').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('dob').style.borderColor = "red";
+				document.getElementById('s_dob').innerHTML = "Enter your DOB";
+			}
+
+			if(blood != "")
+			{
+				document.getElementById('blood').style.borderColor = "green";
+				document.getElementById('s_blood').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('blood').style.borderColor = "red";
+				document.getElementById('s_blood').innerHTML = "Enter your Blood type";
+			}
+
+			if(ck_mobile.test( mobile))
+			{
+				document.getElementById('mobile').style.borderColor = "green";
+				document.getElementById('s_mobile').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('mobile').style.borderColor = "red";
+				document.getElementById('s_mobile').innerHTML = "Enter a valid  mobile No.";
+			}
+
+			if(ck_pincode.test(pincode))
+			{
+				document.getElementById('pincode').style.borderColor = "green";
+				document.getElementById('s_pincode').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('pincode').style.borderColor = "red";
+				document.getElementById('s_pincode').innerHTML = "Enter a valid Pincode";
+			}
+        }
+	</script> 
+</body> 
+
+</html>
