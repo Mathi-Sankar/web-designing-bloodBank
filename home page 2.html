@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <style>
+            body{background-color:white;}
+            .header {
+            padding: 0.001px;
+            text-align: center;
+            background: #B22222;
+            color: white;
+            font-style: serif;
+            font-size: 10px;
+            } 
+
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+            }
+
+            li {
+            float: right;
+            }
+
+            li a {
+            display: block;
+            color: #666;
+            background-color: white;
+            text-align: center;
+            padding: 14px 159px;
+            text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+            background-color: #ddd;
+            }
+
+            li a.active {
+            color: white;
+            background-color: #04AA6D;
+            }
+            .shaded-hr {
+            border: 0; /* Remove default border */
+            height: 1px; /* Set the height of the line */
+            background: linear-gradient(to right, rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0)); /* Apply shading */
+            margin: 3px 0; /* Add some margin above and below the line */
+            }
+
+            .centered-image {
+            display: block; /* Make the image a block element */
+            /*margin: 0 auto; Center the image horizontally */
+            transform: translateX(55px); /* Move the image 20px away from the center */
+            }
+
+            .center {
+            display: block; /* Make the image a block element */
+            margin: 0 auto; /* Center the image horizontally */
+            }
+
+            .image1 {
+            /*float: center; /* Float images to the left */
+            /*margin-right: 0px; Add margin to create space between images */
+            display: inline-block; /* Display images as inline-block elements */
+            vertical-align: right; /* Align images vertically */
+            }
+
+            .image {
+            /*float: right; /* Float images to the left */
+            margin-right: 0.5px; /* Add margin to create space between images */
+            display: inline-block; /* Display images as inline-block elements */
+            vertical-align: right; /* Align images vertically */
+            }
+
+            .image2 {
+            float: left; /* Float images to the left */
+            margin-left: 0px; /* Add margin to create space between images */
+            /*display: inline-block; Display images as inline-block elements */
+            vertical-align: top; /* Align images vertically */
+            position:relative;
+            top:-5px;
+            }
+
+            /*{
+            box-sizing: border-box;
+            }*/
+
+            .row {
+            display: flex;
+            }
+
+            /* Create three equal columns that sits next to each other */
+            .column {
+            flex: 33.33%;
+            padding: 5px;
+            }
+
+            .left-aligned {
+            float: right; /* Float the image to the left */
+            margin-right: 0.5px; /* Add margin to create space between the image and other content */
+            }
+
+            .right-aligned {
+            float: left; /* Float the image to the left */
+            margin-right: 1px; /* Add margin to create space between the image and other content */
+            }
+            p {text-align: center;}
+
+            .cont { 
+            display: grid; 
+            gap: 10px; 
+            } 
+
+            .button {
+            /*display: inline-block;*/
+            padding: 10px 20px; /* Adjust padding to increase button size */
+            background-color: red; /* Button background color */
+            color: black; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            }
+
+            .button2:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+            .element {
+            margin-top: 100px; /* -20 Move the element 20 pixels above its normal position */
+            }
+
+            .container1234{
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 5px;
+            }
+            
+            p {
+            text-align:center; /* Align text in the center */
+            margin-top: -10px;
+            margin-bottom: 5px; /* Add margin at the bottom to create space */
+            line-height: 0.15;
+            margin-bottom: 10px;
+            right:100px;
+            }
+
+            .center1 {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            }
+
+            .right {
+            position: absolute;
+            right: 0.20px;
+            width: 200px;
+            padding: 25px;
+            }
+
+            .left {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            padding: 10px;
+            }
+
+            #blink_text{	
+                margin: 10px 0 0 0;
+                display : flex;
+                justify-content : center;
+            animation-name:blink;
+            width:100%  ;
+            height: 30px;
+            animation-duration:1s;
+            animation-timing-function:ease-in;
+            animation-iteration-count:Infinite;
+            }
+
+            @keyframes blink{
+            0%{color:black;}
+            50%{color:white;}
+            100%{color:black;}
+            } 
+
+            
+            body{background-color:white;}
+
+        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>blood donation website</title>
+    </head>
+
+    
+    
+    <body>
+         <div class="header">
+            <marquee><h1 style="font-family:'sans-serif'">Saving lives one drop at a time: Be a hero, donate blood today.    Be a lifeline,save lives.</h1></marquee>
+        </div>
+        
+
+
+
+        <div class="container">
+            <ul>
+                <!--<li><a style="background-color: #CD5C5C; color:black;" class="active" href="#home">Home</a></li>-->
+                <div class="dropdown"type="button" data-toggle="dropdown" >
+                    <li><a style="background-color: #CD5C5C; color:pink;width: 50px;" href="home page.html">Logout</a></li>
+                    <li><a style="background-color: #CD5C5C; color:pink;width: auto" href="news.html">News</a></li>
+                    <li><a style="background-color: #CD5C5C; color:pink;width: auto" href="contact.html">Contact</a></li>
+                    <li><a style="background-color: #CD5C5C; color:pink;width: auto" href="about.html">About</a></li>
+                </div>
+            </ul>
+          <img src="logo-h.png" width=197 height=68 class="centered-image" > 
+            <!--<p class="p;" style="font-family:arial; font-size: 25px;"><blink><b>Donate Blood,Be a Lifeline</b></blink></p><br>-->
+
+            
+            <!--*<hr class="shaded-hr">-->
+            <!--<h1 style="font-family:sans-serif;background-color: white;color:black;">Be a lifeline.</h1>-->
+        </div>
+
+        
+        <div>
+            <div>
+            <p id='blink_text' font-family="serif"  style ="font-size:30px;">
+                     <b>Donate Blood,Be a Lifeline</b>
+            </p>
+        </div> 
+        
+        
+        <img src="World_Blood_Donor_Day_2021-1200x1280.png" alt="donation" width=700 height=200 class="center"><br><br><br>
+        <img src="rr.jpg" width=120 height=80 align=left>
+        <img src="rr.jpg" width=120 height=80 align=right>
+        <pre><p style="color:firebrick; font-size:25px;" font-family:"sans-serifs"><b>We are inviting 135 Core Indians to Become Life Savers.</pre></p><br>
+        <pre>               <p style="color:crimson; font-size:25px;" font-family:"sans-serifs"><b>Join us in this mission!</pre></p>
+
+        <!--<pre>                                Join us in this mission.</pre></b></p><br><br>-->
+        <img src="rr.jpg" width=120 height=80 align=right>
+        <br>
+        
+        <div>
+            <div>
+            <img src="rr.jpg" width=120 height=80>
+            <p>
+                <a href = "org_main.php">
+                    <button class="button button2" style="color: white;"><b>Find A Blood Donor</b></button><br>
+                </a>
+            </p>
+            </div>    
+        </div>
+        </div><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <p style="color: red; font-size: 30px; font-family:'sans-serif'"><b><i>
+        
+        <pre>                                              Every blood donation has the power to make a profound impact on the lives of those in need.While not everyone is eligible</pre>
+        <pre>                                                     to donate blood, for those who can find it represents a meaningful opportunity to give back to their communities </pre>
+        <pre>                                                          and provide vital support to individuals facing health challenges.By donating blood, you are contributing</pre>
+        <pre>                                                                    to the well-being of others and offering hope and assistance to those who need it most. </pre>
+        <pre>                                                                            Your generosity can truly make a difference in the world.</pre></i></b> </p>
+        
+        <div class="element">
+            
+            <img src="aaa.png" alt="rbc1" width=1450 height=800 class="center">
+        </div>
+
+    </body>
+
+</html>
